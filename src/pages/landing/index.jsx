@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
-import hero from '../../assets/images/hero.jpg'; // Replace with your image path
+import hero from '../../assets/images/hero.jpg'; 
 import { useNavigate } from "react-router-dom";
 
 
@@ -87,7 +87,7 @@ const Landing = () => {
                             </motion.p>
                             
                             <motion.button
-                                onClick={() => (window.location.href = "/about-us")}
+                                onClick={() => navigate("/about-us")}
                                 className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
