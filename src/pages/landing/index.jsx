@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg'; // Replace with your image path
+import { useNavigate } from "react-router-dom";
+
+
 
 const Landing = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Navbar />
@@ -33,7 +37,7 @@ const Landing = () => {
                             Premium organic solutions for healthier soils and a greener planet.
                         </motion.p>
                         <motion.button
-                            onClick={() => (window.location.href = "/contact")}
+                            onClick={() => navigate("/contact-us")}
                             className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -81,6 +85,7 @@ const Landing = () => {
                             >
                                 At DAGRA SALEPUSH ENTERPRISE, we specialize in sustainable soil solutions that empower farmers and restore the environment. Learn more about how we’re transforming agriculture and promoting eco-friendly practices.
                             </motion.p>
+                            
                             <motion.button
                                 onClick={() => (window.location.href = "/about-us")}
                                 className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
@@ -90,6 +95,7 @@ const Landing = () => {
                             >
                                 Read More
                             </motion.button>
+                        
                         </div>
                         <motion.div
                             className="md:w-1/2 flex justify-center"
