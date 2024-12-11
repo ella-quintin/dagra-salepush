@@ -1,21 +1,22 @@
 import Navbar from "../../components/navbar";
-import hero from '../../assets/images/hero.jpg';
+import soiltwo from '../../assets/images/soiltwo.jpg';
 import ceo from '../../assets/images/ceo.jpg';
 import { motion } from "framer-motion";
+import Footer from "../../components/footer";
 
 const AboutUs = () => {
     return (
         <>
             <Navbar />
-            <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 mt-16">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-700 mb-8">
                         Who We Are
                     </h2>
-                    <div className="flex flex-col sm:flex-row items-center">
+                    <div className="flex flex-col sm:flex-row items-center gap-10">
                         <div className="sm:w-1/2 mb-8 sm:mb-0 sm:mr-6">
                             <img
-                                src={hero}
+                                src={soiltwo}
                                 alt="About DAGRA SalePush Enterprise"
                                 className="rounded-lg shadow-lg w-full h-auto"
                             />
@@ -81,7 +82,7 @@ const AboutUs = () => {
                                     A dedicated professional with a passion for sustainability, Mr. Mensah is committed to transforming agriculture through innovative organic solutions. He is also a devoted husband and father of two.
                                 </motion.p>
 
-                                <motion.button
+                                {/* <motion.button
                                     onClick={() => navigate("/about-founder")}
                                     className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                                     initial={{ scale: 0 }}
@@ -89,7 +90,7 @@ const AboutUs = () => {
                                     transition={{ duration: 0.5, delay: 1 }}
                                 >
                                     Learn More
-                                </motion.button>
+                                </motion.button> */}
                             </div>
                             <motion.div
                                 className="md:w-1/2 flex justify-center"
@@ -107,6 +108,7 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

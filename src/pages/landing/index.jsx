@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg';
-
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer";
 
@@ -13,7 +12,7 @@ const Landing = () => {
             <div className="overflow-hidden">
                 {/* Hero Section */}
                 <motion.div
-                    className="relative w-full min-h-screen bg-cover bg-center pt-[80px]"
+                    className="relative w-full min-h-screen bg-cover bg-center pt-[80px] mt-10"
                     style={{ backgroundImage: `url(${hero})` }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -120,7 +119,7 @@ const Landing = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-12">Our Mission & Vision</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Our Mission & Vision</h2>
                     </motion.div>
                     <motion.div
                         className="max-w-7xl mx-auto bg-green-500 text-white rounded-lg shadow-lg p-6 md:p-12"
@@ -142,11 +141,11 @@ const Landing = () => {
                 <motion.div
                     className="py-16 px-6 md:px-12 bg-white"
                     whileInView={{
-                        y: 0,       
-                        opacity: 1,  
+                        y: 0,
+                        opacity: 1,
                     }}
-                    initial={{ y: "50vh", opacity: 0 }} 
-                    viewport={{ once: false, amount: 0.5 }} 
+                    initial={{ y: "50vh", opacity: 0 }}
+                    viewport={{ once: false, amount: 0.5 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <div className="max-w-7xl mx-auto">
@@ -158,7 +157,7 @@ const Landing = () => {
                         >
                             Our Impact
                         </motion.h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                             <motion.div
                                 className="text-center"
                                 initial={{ opacity: 0 }}
@@ -176,7 +175,7 @@ const Landing = () => {
                                 className="text-center"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 0.5, delay: 0.8}}
+                                transition={{ duration: 0.5, delay: 0.8 }}
                             >
                                 <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
                                     Carbon Sequestration
@@ -198,9 +197,23 @@ const Landing = () => {
                                     Our products enhance soil health, increasing crop yields and contributing to long-term food security.
                                 </p>
                             </motion.div>
+                            <motion.div
+                                className="text-center"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                            >
+                                <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
+                                    Land Reclamation
+                                </h3>
+                                <p className="text-gray-600 text-sm md:text-base">
+                                    Our solutions rehabilitate degraded lands, making them productive again for agriculture and ecosystems.
+                                </p>
+                            </motion.div>
                         </div>
                     </div>
                 </motion.div>
+
 
                 {/* Call to Action */}
                 <section className="py-16 px-6 md:px-12 bg-gray-200 text-center">
@@ -239,7 +252,7 @@ const Landing = () => {
                     </motion.div>
                 </section>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 };

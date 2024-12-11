@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg';
 import sack from '../../assets/images/sack.jpg'
 import soil from '../../assets/images/soil.jpg'
+import Footer from "../../components/footer";
 
 const Product = () => {
     return (
@@ -37,7 +38,7 @@ const Product = () => {
 
                             <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Key Benefits</h3>
                             <ul className="list-disc pl-6 text-gray-600 text-base sm:text-lg mb-6">
-                                <li>Improves soil structure and retains moisture.</li>
+                                <li>Improves soil structure, retains moisture and nutrients.</li>
                                 <li>Enriches microbial activity for better soil health.</li>
                                 <li>Reduces dependency on chemical fertilizers.</li>
                                 <li>Reclaims degraded lands, including areas affected by galamsey.</li>
@@ -73,6 +74,7 @@ const Product = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
