@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg';
+import soilthree from '../../assets/images/soilthree.jpg';
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer";
 
@@ -102,7 +103,7 @@ const Landing = () => {
                             transition={{ duration: 1, delay: 1.2 }}
                         >
                             <img
-                                src={hero} // Replace with your image path
+                                src={soilthree} 
                                 alt="About Us"
                                 className="rounded-full shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover"
                             />

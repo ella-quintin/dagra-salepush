@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar";
-import {MapPin, Phone, Mail} from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import Footer from "../../components/footer";
 
 const Contact = () => {
     return (
@@ -10,7 +11,7 @@ const Contact = () => {
                 <div className="text-center py-12 bg-green-500 text-white mt-16">
                     <h1 className="text-3xl sm:text-4xl font-bold">Contact Us</h1>
                     <p className="text-base sm:text-lg mt-4">
-                    Partner with us to reduce chemical fertilizer usage and improve soil health.
+                        Partner with us to reduce chemical fertilizer usage and improve soil health.
                     </p>
                 </div>
 
@@ -20,7 +21,7 @@ const Contact = () => {
                     <div className="flex flex-col justify-center space-y-6">
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Join Us in Making a Difference</h2>
                         <p className="text-sm sm:text-base text-gray-600">
-                        Reach out to learn how Dagra Organic Soil Conditioner can transform your farmland!
+                            Reach out to learn how Dagra Organic Soil Conditioner can transform your farmland!
                         </p>
 
                         <ul className="space-y-4">
@@ -50,12 +51,13 @@ const Contact = () => {
                     <div>
                         <iframe
                             className="w-full h-64 sm:h-80 rounded-lg shadow-lg"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537354158923!3d-37.81720974201644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43c6b0b7b7%3A0xe56ed1a4c8f0dbf5!2sVictoria%20State%20Library!5e0!3m2!1sen!2sus!4v1601539697607!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3961.841487495894!2d-1.4629803254596598!3d6.78913502002037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%20Juaben%20quarters!5e0!3m2!1sen!2sgh!4v1733937739715!5m2!1sen!2sgh"
                             allowFullScreen=""
                             loading="lazy"
-                            title="Google Maps Location"
+                            title="Juaben Quarters, Ashanti"
                         ></iframe>
                     </div>
+
                 </div>
 
                 {/* Social Links */}
@@ -97,6 +99,7 @@ const Contact = () => {
                     </div>
                 </div> */}
             </div>
+            <Footer />
         </>
     );
 };

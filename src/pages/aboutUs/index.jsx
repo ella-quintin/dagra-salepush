@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 mt-16">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-700 mb-8">
-                        Who We Are
+                        About Us
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center gap-10">
                         <div className="sm:w-1/2 mb-8 sm:mb-0 sm:mr-6">
