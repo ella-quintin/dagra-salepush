@@ -1,5 +1,7 @@
 import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg';
+import ceo from '../../assets/images/ceo.jpg';
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
     return (
@@ -36,6 +38,73 @@ const AboutUs = () => {
                             </p>
                         </div>
                     </div>
+
+                    {/* About Founder & C.E.O Section */}
+                    <motion.div
+                        className="py-16 px-6 md:px-12 bg-gray-100 mt-16"
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                        }}
+                        initial={{ x: "0vw", opacity: 0 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                    >
+                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+                            <div className="md:w-1/2 mb-8 md:mb-0">
+                                <motion.h4
+                                    className="text-green-500 uppercase tracking-wide font-semibold mb-2"
+                                    initial={{ x: -50, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                >
+                                    About the Founder & C.E.O
+                                </motion.h4>
+                                <motion.h2
+                                    className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                                    initial={{ x: 50, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                >
+                                    Mr. Daniel Mensah
+                                </motion.h2>
+                                <motion.p
+                                    className="text-gray-600 text-base md:text-lg mb-6"
+                                    initial={{ y: 50, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                >
+                                    Mr. Daniel Mensah, Founder and CEO of DAGRA SALEPUSH ENTERPRISE, is a skilled chemical engineer with a BTech and HND from Kumasi Technical University. With certifications in industrial engineering and waste management, he has extensive experience in process optimization, sustainability, and environmental stewardship.
+
+                                    His career highlights include roles at Juaben Oil Mills, where he was recognized as "Best Staff of the Year" in 2021 and served as Assistant Project Coordinator for a biomass energy plant. He has also worked with OKO Energy and currently serves as an Assistant Officer in Small-Scale Mining at the Mineral Commission.
+
+                                    A dedicated professional with a passion for sustainability, Mr. Mensah is committed to transforming agriculture through innovative organic solutions. He is also a devoted husband and father of two.
+                                </motion.p>
+
+                                <motion.button
+                                    onClick={() => navigate("/about-founder")}
+                                    className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                                    initial={{ scale: 0 }}
+                                    whileInView={{ scale: 1 }}
+                                    transition={{ duration: 0.5, delay: 1 }}
+                                >
+                                    Learn More
+                                </motion.button>
+                            </div>
+                            <motion.div
+                                className="md:w-1/2 flex justify-center"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 1, delay: 1.2 }}
+                            >
+                                <img
+                                    src={ceo} // 
+                                    alt="About the Founder"
+                                    className="rounded-full bg-[#EDE2C4] shadow-lg w-64 h-64 md:w-80 md:h-80 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </>

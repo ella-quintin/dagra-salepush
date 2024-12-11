@@ -23,18 +23,18 @@ const Contact = () => {
                         </p>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <span className="material-icons text-green-500 text-2xl mr-3">location_on</span>
+                                <span className="material-icons text-green-500 text-2xl mr-3">location:</span>
                                 <p className="text-sm sm:text-base text-gray-700">
-                                    123 Green Earth Avenue, Sustainability City, Planet 10101
+                                Juaben-Ashanti 
                                 </p>
                             </li>
                             <li className="flex items-start">
-                                <span className="material-icons text-green-500 text-2xl mr-3">phone</span>
-                                <p className="text-sm sm:text-base text-gray-700">+1 (234) 567-890</p>
+                                <span className="material-icons text-green-500 text-2xl mr-3">phone:</span>
+                                <p className="text-sm sm:text-base text-gray-700">+233 2413 75734</p>
                             </li>
                             <li className="flex items-start">
                                 <span className="material-icons text-green-500 text-2xl mr-3">email</span>
-                                <p className="text-sm sm:text-base text-gray-700">contact@dagrasolutions.com</p>
+                                <p className="text-sm sm:text-base text-gray-700">danielmenah43@gmail.com</p>
                             </li>
                         </ul>
                     </div>

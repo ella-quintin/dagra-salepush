@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
-import hero from '../../assets/images/hero.jpg'; 
+import hero from '../../assets/images/hero.jpg';
+
 import { useNavigate } from "react-router-dom";
-
-
+import Footer from "../../components/footer";
 
 const Landing = () => {
     const navigate = useNavigate();
     return (
         <>
             <Navbar />
-            <div>
+            <div className="overflow-hidden">
                 {/* Hero Section */}
                 <motion.div
-                    className="relative w-full h-screen bg-cover bg-center"
+                    className="relative w-full min-h-screen bg-cover bg-center pt-[80px]"
                     style={{ backgroundImage: `url(${hero})` }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -56,7 +56,7 @@ const Landing = () => {
                         opacity: 1,
                     }}
                     initial={{ x: "0vw", opacity: 0 }}
-                    viewport={{ once: false, amount: 0.5 }} // Changed once to false to make it trigger on every scroll
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
@@ -85,7 +85,7 @@ const Landing = () => {
                             >
                                 At DAGRA SALEPUSH ENTERPRISE, we specialize in sustainable soil solutions that empower farmers and restore the environment. Learn more about how we’re transforming agriculture and promoting eco-friendly practices.
                             </motion.p>
-                            
+
                             <motion.button
                                 onClick={() => navigate("/about-us")}
                                 className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
@@ -95,7 +95,6 @@ const Landing = () => {
                             >
                                 Read More
                             </motion.button>
-                        
                         </div>
                         <motion.div
                             className="md:w-1/2 flex justify-center"
@@ -112,15 +111,42 @@ const Landing = () => {
                     </div>
                 </motion.div>
 
-                {/* Our Impact Section - Slide from Bottom */}
+                {/* Mission & Vision Section */}
+                <section className="py-16 px-6 md:px-12 bg-gray-100">
+                    <motion.div
+                        className="max-w-7xl mx-auto text-center"
+                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-12">Our Mission & Vision</h2>
+                    </motion.div>
+                    <motion.div
+                        className="max-w-7xl mx-auto bg-green-500 text-white rounded-lg shadow-lg p-6 md:p-12"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    >
+                        <p className="text-base md:text-lg leading-relaxed">
+                            <span className="font-bold">Mission:</span> To create sustainable, eco-friendly organic soil conditioners that enhance soil fertility, improve crop yields, and support climate resilience by recycling agricultural waste into valuable resources while actively contributing to carbon sequestration.
+                        </p>
+                        <p className="text-base md:text-lg leading-relaxed mt-6">
+                            <span className="font-bold">Vision:</span> To become a global leader in promoting regenerative agriculture and environmental restoration, empowering communities through innovative soil solutions that foster food security, sustainable farming, and a healthier planet.
+                        </p>
+                    </motion.div>
+                </section>
+
+                {/* Our Impact Section */}
                 <motion.div
                     className="py-16 px-6 md:px-12 bg-white"
                     whileInView={{
-                        y: 0,         // Slide from bottom to top
-                        opacity: 1,   // Fade in
+                        y: 0,       
+                        opacity: 1,  
                     }}
-                    initial={{ y: "50vh", opacity: 0 }}  // Start from below the viewport
-                    viewport={{ once: false, amount: 0.5 }} // Trigger every time section is in view
+                    initial={{ y: "50vh", opacity: 0 }} 
+                    viewport={{ once: false, amount: 0.5 }} 
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <div className="max-w-7xl mx-auto">
@@ -128,7 +154,7 @@ const Landing = () => {
                             className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
                             initial={{ y: -50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 0.5 }}
                         >
                             Our Impact
                         </motion.h2>
@@ -137,7 +163,7 @@ const Landing = () => {
                                 className="text-center"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: 1.6 }}
+                                transition={{ duration: 0.5, delay: 1 }}
                             >
                                 <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
                                     Healthy Soils
@@ -150,32 +176,70 @@ const Landing = () => {
                                 className="text-center"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: 1.8 }}
+                                transition={{ duration: 0.5, delay: 0.8}}
                             >
                                 <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
-                                    Reclaimed Lands
+                                    Carbon Sequestration
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
-                                    We actively work to reclaim lands degraded by illegal mining, giving farmers a fresh start.
+                                    By utilizing agricultural waste, we promote carbon sequestration, helping to mitigate climate change.
                                 </p>
                             </motion.div>
                             <motion.div
                                 className="text-center"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: 2 }}
+                                transition={{ duration: 0.5, delay: 0.5 }}
                             >
                                 <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
-                                    Eco-Friendly Practices
+                                    Food Security
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
-                                    Supporting a greener planet with sustainable, eco-conscious agricultural practices.
+                                    Our products enhance soil health, increasing crop yields and contributing to long-term food security.
                                 </p>
                             </motion.div>
                         </div>
                     </div>
                 </motion.div>
+
+                {/* Call to Action */}
+                <section className="py-16 px-6 md:px-12 bg-gray-200 text-center">
+                    <motion.div
+                        className="max-w-7xl mx-auto"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    >
+                        <motion.h2
+                            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                        >
+                            Join Us in Making a Difference
+                        </motion.h2>
+                        <motion.p
+                            className="text-gray-600 text-base md:text-lg mb-8"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                        >
+                            Partner with us to support sustainable agriculture, healthy soils, and a greener future.
+                        </motion.p>
+                        <motion.button
+                            onClick={() => navigate("/contact-us")}
+                            className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1 }}
+                        >
+                            Contact Us
+                        </motion.button>
+                    </motion.div>
+                </section>
             </div>
+            <Footer/>
         </>
     );
 };
