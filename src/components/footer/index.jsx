@@ -3,8 +3,6 @@ import { Facebook, Instagram, Linkedin, } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import tiktok from "../../assets/images/tiktok.png";
 
 const Footer = () => {
@@ -12,25 +10,26 @@ const Footer = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
+      
         emailjs
-            .sendForm(
-                "service_rid8tfh",
-                "template_w1830sh",
-                form.current,
-                "w0GfeCN8k1_stJidz"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    toast.success("Message sent successfully!");
-                },
-                (error) => {
-                    console.log(error.text);
-                    toast.error("Failed to send message. Please try again later.");
-                }
-            );
-    };
+          .sendForm(
+            "service_rid8tfh",   // Your service ID
+            "template_w1830sh",  // Your template ID
+            form.current,        // The form reference
+            "w0GfeCN8k1_stJidz"  // Your public key
+          )
+          .then(
+            (result) => {
+              console.log("Email sent successfully:", result.text);
+              toast.success("Message sent successfully!");
+            },
+            (error) => {
+              console.error("Error sending email:", error.text);
+              toast.error("Failed to send message. Please try again later.");
+            }
+          );
+      };
+      
 
     return (
         <footer className="bg-gradient-to-r from-green-600 to-green-500 text-white py-12">
@@ -142,7 +141,6 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Dagra Salepush. All rights reserved.
                 </p>
             </div>
-
         </footer>
     );
 };
