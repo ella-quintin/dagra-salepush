@@ -135,6 +135,10 @@ const Landing = () => {
                         <p className="text-base md:text-lg leading-relaxed mt-6">
                             <span className="font-bold">Vision:</span> To become a global leader in promoting regenerative agriculture and environmental restoration, empowering communities through innovative soil solutions that foster food security, sustainable farming, and a healthier planet.
                         </p>
+                        <p className="text-base md:text-lg leading-relaxed mt-6">
+                            <span className="font-bold">Core Values:</span>  Sustainability, Integrity, innovation and Climate action
+
+                        </p>
                     </motion.div>
                 </section>
 

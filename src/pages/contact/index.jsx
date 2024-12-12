@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Footer from "../../components/footer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
     return (
@@ -8,17 +9,32 @@ const Contact = () => {
             <Navbar />
             <div className="bg-gray-100 min-h-screen">
                 {/* Header Section */}
-                <div className="text-center py-12 bg-green-500 text-white mt-16">
+                <motion.div
+                    className="text-center py-12 bg-green-500 text-white mt-16"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <h1 className="text-3xl sm:text-4xl font-bold">Contact Us</h1>
                     <p className="text-base sm:text-lg mt-4">
                         Partner with us to reduce chemical fertilizer usage and improve soil health.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Contact Details Section */}
-                <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <motion.div
+                    className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                >
                     {/* Contact Info */}
-                    <div className="flex flex-col justify-center space-y-6">
+                    <motion.div
+                        className="flex flex-col justify-center space-y-6"
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Join Us in Making a Difference</h2>
                         <p className="text-sm sm:text-base text-gray-600">
                             Reach out to learn how Dagra Organic Soil Conditioner can transform your farmland!
@@ -44,11 +60,14 @@ const Contact = () => {
                                 </p>
                             </li>
                         </ul>
-
-                    </div>
+                    </motion.div>
 
                     {/* Map Section */}
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
                         <iframe
                             className="w-full h-64 sm:h-80 rounded-lg shadow-lg"
                             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3961.841487495894!2d-1.4629803254596598!3d6.78913502002037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%20Juaben%20quarters!5e0!3m2!1sen!2sgh!4v1733937739715!5m2!1sen!2sgh"
@@ -56,9 +75,8 @@ const Contact = () => {
                             loading="lazy"
                             title="Juaben Quarters, Ashanti"
                         ></iframe>
-                    </div>
-
-                </div>
+                    </motion.div>
+                </motion.div>
 
                 {/* Social Links */}
                 {/* <div className="bg-gray-800 py-6 sm:py-8 text-center text-white">

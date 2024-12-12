@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import logo from "../../assets/images/logo.png";
+import logoText from "../../assets/images/logoText.png";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -42,8 +43,10 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
             <div className="container mx-auto flex items-center justify-between p-4 md:p-6">
                 {/* Logo */}
-                <div className="flex items-center">
-                    <h3 className="text-green-600 font-bold text-3xl">Dagra Salepush</h3>
+                <div className="flex items-center gap-2 ">
+                    <img src={logo} alt="logo" className="h-8 sm:h-10"  />
+                    <img src={logoText} alt="logo" className="h-6 sm:h-8 mt-4"  />
+                    {/* <h3 className="text-green-600 font-bold text-3xl">DAGRA</h3> */}
                 </div>
 
                 {/* Navigation Links */}

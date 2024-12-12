@@ -1,9 +1,11 @@
-import { Facebook, Linkedin, Youtube } from "lucide-react";
+
+import { Facebook, Instagram, Linkedin, } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import tiktok from "../../assets/images/tiktok.png";
-
 
 const Footer = () => {
     const form = useRef();
@@ -21,11 +23,11 @@ const Footer = () => {
             .then(
                 (result) => {
                     console.log(result.text);
-                    alert("Message sent successfully!");
+                    toast.success("Message sent successfully!");
                 },
                 (error) => {
                     console.log(error.text);
-                    alert("Failed to send message. Please try again later.");
+                    toast.error("Failed to send message. Please try again later.");
                 }
             );
     };
@@ -43,10 +45,9 @@ const Footer = () => {
 
                     <div className="flex space-x-4">
                         {[
-                            { Icon: Facebook, url: "/" },
-                            { Icon: Linkedin, url: "/" },
-                            { Icon: () => <img src={tiktok} alt="TikTok" className="w-5 h-5" />, url: "/" },
-                            { Icon: Youtube, url: "https://www.youtube.com/@mcblay521" }
+                            { Icon: Facebook, url: "https://www.facebook.com/share/15PcJgxqQ1/?mibextid=LQQJ4d" },
+                            { Icon: () => <img src={tiktok} alt="TikTok" className="w-5 h-5" />, url: "https://www.tiktok.com/@dagra_salepush_ent?_t=8s6QExJtuMw&_r=1" },
+                            { Icon: Instagram, url: "https://www.instagram.com/invites/contact/?igsh=1plephdv1upyg&utm_content=wrctpcm" }
                         ].map(({ Icon, url, hoverClass = "hover:bg-white hover:text-green-600" }, idx) => (
                             <a key={idx} href={url} target="_blank" rel="noopener noreferrer" className={`p-2 rounded border border-white ${hoverClass}`}>
                                 <Icon />
@@ -141,6 +142,7 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Dagra Salepush. All rights reserved.
                 </p>
             </div>
+
         </footer>
     );
 };

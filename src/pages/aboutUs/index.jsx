@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar";
 import soiltwo from '../../assets/images/soiltwo.jpg';
-import ceo from '../../assets/images/ceo.jpg';
+import ceo from '../../assets/images/ceo.png';
 import { motion } from "framer-motion";
 import Footer from "../../components/footer";
 
@@ -10,35 +10,73 @@ const AboutUs = () => {
             <Navbar />
             <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 mt-16">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-700 mb-8">
+                    <motion.h2
+                        className="text-3xl sm:text-4xl font-bold text-center text-green-600 mb-8"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                    >
                         About Us
-                    </h2>
-                    <div className="flex flex-col sm:flex-row items-center gap-10">
+                    </motion.h2>
+                    <motion.div
+                        className="flex flex-col sm:flex-row items-center gap-10"
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                    >
                         <div className="sm:w-1/2 mb-8 sm:mb-0 sm:mr-6">
-                            <img
+                            <motion.img
                                 src={soiltwo}
                                 alt="About DAGRA SalePush Enterprise"
                                 className="rounded-lg shadow-lg w-full h-auto"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5 }}
                             />
                         </div>
                         <div className="sm:w-1/2">
-                            <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-8">
+                            <motion.p
+                                className="text-lg sm:text-xl text-gray-700 mb-6 leading-8"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 1 }}
+                            >
                                 At <strong>DAGRA SALEPUSH ENTERPRISE</strong>, located in the heart of Juaben-Ashanti, Ghana, we are on a mission to transform agriculture and promote environmental sustainability through innovative, natural soil solutions. With a deep commitment to supporting farmers and protecting the planet, we strive to create sustainable practices that yield healthier crops, restore degraded lands, and ensure a greener future for generations to come.
-                            </p>
-                            <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-8">
+                            </motion.p>
+                            <motion.p
+                                className="text-lg sm:text-xl text-gray-700 mb-6 leading-8"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 1.5 }}
+                            >
                                 Our flagship product, <strong>DAGRA Organic Soil Conditioner</strong>, is crafted from locally sourced agricultural and organic waste, including wood residues, manure, egg shells, coconut husks, and bird droppings. This premium soil conditioner not only rejuvenates soil health but also plays a vital role in reducing carbon emissions and enhancing biodiversity. Its innovative formulation provides benefits ranging from nutrient retention and microbial activity enhancement to long-term carbon sequestration and soil structural improvements.
-                            </p>
-                            <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-8">
+                            </motion.p>
+                            <motion.p
+                                className="text-lg sm:text-xl text-gray-700 mb-6 leading-8"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 2 }}
+                            >
                                 As a response to the devastating effects of galamsey (illegal mining) in Ghana, which has left countless farmlands barren, we are committed to reclaiming and restoring these lands. By leveraging our organic solutions, farmers can achieve higher yields, reduce their dependence on chemical fertilizers, and cultivate fertile, sustainable farmlands once again.
-                            </p>
-                            <p className="text-lg sm:text-xl text-gray-700 mb-6 leading-8">
+                            </motion.p>
+                            <motion.p
+                                className="text-lg sm:text-xl text-gray-700 mb-6 leading-8"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 2.5 }}
+                            >
                                 Our vision extends beyond soil rejuvenation. At DAGRA SALEPUSH ENTERPRISE, we believe in empowering local communities and fostering practices that balance agricultural productivity with environmental responsibility. Every step we take is driven by our passion for innovation, sustainability, and the well-being of both farmers and the ecosystem.
-                            </p>
-                            <p className="text-lg sm:text-xl text-gray-700 font-bold">
+                            </motion.p>
+                            <motion.p
+                                className="text-lg sm:text-xl text-gray-700 font-bold"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 3 }}
+                            >
                                 Together, we can revolutionize agriculture, restore our environment, and create a future where both people and the planet thrive. Join us on this transformative journey.
-                            </p>
+                            </motion.p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* About Founder & C.E.O Section */}
                     <motion.div
@@ -75,11 +113,9 @@ const AboutUs = () => {
                                     whileInView={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 1 }}
                                 >
-                                    Mr. Daniel Mensah, Founder and CEO of DAGRA SALEPUSH ENTERPRISE, is a skilled chemical engineer with a BTech and HND from Kumasi Technical University. With certifications in industrial engineering and waste management, he has extensive experience in process optimization, sustainability, and environmental stewardship.
-
-                                    His career highlights include roles at Juaben Oil Mills, where he was recognized as "Best Staff of the Year" in 2021 and served as Assistant Project Coordinator for a biomass energy plant. He has also worked with OKO Energy and currently serves as an Assistant Officer in Small-Scale Mining at the Mineral Commission.
-
-                                    A dedicated professional with a passion for sustainability, Mr. Mensah is committed to transforming agriculture through innovative organic solutions. He is also a devoted husband and father of two.
+                                    I am Mensah Daniel, a passionate entrepreneur dedicated to advancing sustainable agriculture and environmental restoration. As the founder of DAGRA SALEPUSH ENTERPRISE, I have committed my efforts to producing eco-friendly organic soil conditioners, including biochar, to address critical challenges in soil health, crop productivity, and climate resilience.
+                                    With a deep understanding of the environmental and agricultural landscape, I focus on transforming agricultural waste into valuable soil-enhancing products. My vision is to empower farmers, revitalize degraded lands, and contribute to global efforts in carbon sequestration and sustainable farming practices.
+                                    At DAGRA SALEPUSH ENTERPRISE, I am leading a mission to bring innovative solutions to the forefront, creating a positive impact on communities, the environment, and the future of agriculture.
                                 </motion.p>
 
                                 {/* <motion.button
@@ -101,14 +137,14 @@ const AboutUs = () => {
                                 <img
                                     src={ceo} // 
                                     alt="About the Founder"
-                                    className="rounded-full bg-[#EDE2C4] shadow-lg w-64 h-64 md:w-80 md:h-80 object-contain"
+                                    className="rounded-full bg-[#D9E4EA] shadow-lg w-72 h-72 md:w-80 md:h-80 object-contain"
                                 />
                             </motion.div>
                         </div>
                     </motion.div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 };
