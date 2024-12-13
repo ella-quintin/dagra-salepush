@@ -82,7 +82,7 @@ const Contact = () => {
                             <li className="flex items-center">
                                 <Mail className="text-[#088E31] w-6 h-6 mr-3" />
                                 <p className="text-sm sm:text-base text-gray-700">
-                                    <span className="font-bold">Email:</span> danielmenah43@gmail.com
+                                    <span className="font-bold">Email:</span> dagra2024@gmail.com
                                 </p>
                             </li>
                         </ul>

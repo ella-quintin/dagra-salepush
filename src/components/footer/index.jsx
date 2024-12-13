@@ -13,10 +13,10 @@ const Footer = () => {
       
         emailjs
           .sendForm(
-            "service_rid8tfh",   // Your service ID
-            "template_w1830sh",  // Your template ID
+            "service_c508efo",   // Your service ID
+            "template_nh9uo8o",  // Your template ID
             form.current,        // The form reference
-            "w0GfeCN8k1_stJidz"  // Your public key
+            "psVSotQ1pY1gvuoVg"  // Your public key
           )
           .then(
             (result) => {
