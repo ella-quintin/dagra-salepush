@@ -2,11 +2,37 @@ import { motion } from "framer-motion";
 import Navbar from "../../components/navbar";
 import hero from '../../assets/images/hero.jpg';
 import soilthree from '../../assets/images/soilthree.jpg';
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer";
 
 const Landing = () => {
     const navigate = useNavigate();
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    // Handle scroll events to toggle button visibility
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowScrollButton(true);
+            } else {
+                setShowScrollButton(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll to top logic
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+
     return (
         <>
             <Navbar />
@@ -103,7 +129,7 @@ const Landing = () => {
                             transition={{ duration: 1, delay: 1.2 }}
                         >
                             <img
-                                src={soilthree} 
+                                src={soilthree}
                                 alt="About Us"
                                 className="rounded-full shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover"
                             />
@@ -257,6 +283,20 @@ const Landing = () => {
                     </motion.div>
                 </section>
             </div>
+
+            {/* Scroll to Top Button */}
+            {showScrollButton && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-5 right-5 bg-[#088E31] text-white p-4 rounded-full shadow-lg hover:bg-green-600 focus:outline-none"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                >
+                    ↑
+                </motion.button>
+            )}
             <Footer />
         </>
     );

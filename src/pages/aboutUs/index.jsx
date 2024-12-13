@@ -2,9 +2,35 @@ import Navbar from "../../components/navbar";
 import soiltwo from '../../assets/images/soiltwo.jpg';
 import ceo from '../../assets/images/ceo.png';
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Footer from "../../components/footer";
 
 const AboutUs = () => {
+
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    // Handle scroll events to toggle button visibility
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowScrollButton(true);
+            } else {
+                setShowScrollButton(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll to top logic
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <>
             <Navbar />
@@ -152,6 +178,20 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
             </div>
+             {/* Scroll to Top Button */}
+             {showScrollButton && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-5 right-5 bg-[#088E31] text-white p-4 rounded-full shadow-lg hover:bg-green-600 focus:outline-none"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                >
+                    ↑
+                </motion.button>
+            )}
+
             <Footer />
         </>
     );
