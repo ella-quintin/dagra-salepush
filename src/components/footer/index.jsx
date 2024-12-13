@@ -10,26 +10,30 @@ const Footer = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-      
+
         emailjs
-          .sendForm(
-            "service_c508efo",   // Your service ID
-            "template_nh9uo8o",  // Your template ID
-            form.current,        // The form reference
-            "psVSotQ1pY1gvuoVg"  // Your public key
-          )
-          .then(
-            (result) => {
-              console.log("Email sent successfully:", result.text);
-              toast.success("Message sent successfully!");
-            },
-            (error) => {
-              console.error("Error sending email:", error.text);
-              toast.error("Failed to send message. Please try again later.");
-            }
-          );
-      };
-      
+            .sendForm(
+                "service_c508efo",
+                "template_nh9uo8o",
+                form.current,
+                "psVSotQ1pY1gvuoVg"
+            )
+            .then(
+                (result) => {
+                    console.log("Email sent successfully:", result.text);
+                    toast.success("Message sent successfully!"), {
+                        style: { backgroundColor: '#088E31', color: '#fff' }
+                    }
+                },
+                (error) => {
+                    console.error("Error sending email:", error.text);
+                    toast.error("Failed to send message. Please try again later."), {
+                        style: { backgroundColor: '#088E31', color: '#fff' }
+                    }
+                }
+            );
+    };
+
 
     return (
         <footer className="bg-gradient-to-r from-[#088E31] to-green-500 text-white py-12">

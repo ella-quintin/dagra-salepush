@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
+import { Link, useLocation } from "react-router-dom"; 
 import logo from "../../assets/images/logo.png";
 import logoText from "../../assets/images/logoText.png";
 import { Menu, X } from "lucide-react";
@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
-    const location = useLocation(); // Get the current location
+    const location = useLocation(); 
 
     // Close menu when scrolling
     useEffect(() => {
