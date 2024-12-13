@@ -38,7 +38,7 @@ const Landing = () => {
                         </motion.p>
                         <motion.button
                             onClick={() => navigate("/contact-us")}
-                            className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                            className="bg-[#088E31] text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.6 }}
@@ -62,7 +62,7 @@ const Landing = () => {
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-8 md:mb-0">
                             <motion.h4
-                                className="text-green-500 uppercase tracking-wide font-semibold mb-2"
+                                className="text-[#088E31] uppercase tracking-wide font-semibold mb-2"
                                 initial={{ x: -50, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1 }}
@@ -88,7 +88,7 @@ const Landing = () => {
 
                             <motion.button
                                 onClick={() => navigate("/about-us")}
-                                className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                                className="bg-[#088E31] text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
                                 transition={{ duration: 0.5, delay: 1 }}
@@ -123,7 +123,7 @@ const Landing = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Our Mission & Vision</h2>
                     </motion.div>
                     <motion.div
-                        className="max-w-7xl mx-auto bg-green-500 text-white rounded-lg shadow-lg p-6 md:p-12"
+                        className="max-w-7xl mx-auto bg-[#088E31] text-white rounded-lg shadow-lg p-6 md:p-12"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -169,7 +169,7 @@ const Landing = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 1 }}
                             >
-                                <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
+                                <h3 className="text-xl md:text-2xl font-bold text-[#088E31] mb-4">
                                     Healthy Soils
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
@@ -182,7 +182,7 @@ const Landing = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.8 }}
                             >
-                                <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
+                                <h3 className="text-xl md:text-2xl font-bold text-[#088E31] mb-4">
                                     Carbon Sequestration
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
@@ -195,7 +195,7 @@ const Landing = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.5 }}
                             >
-                                <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
+                                <h3 className="text-xl md:text-2xl font-bold text-[#088E31] mb-4">
                                     Food Security
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
@@ -208,7 +208,7 @@ const Landing = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                             >
-                                <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
+                                <h3 className="text-xl md:text-2xl font-bold text-[#088E31] mb-4">
                                     Land Reclamation
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
@@ -247,7 +247,7 @@ const Landing = () => {
                         </motion.p>
                         <motion.button
                             onClick={() => navigate("/contact-us")}
-                            className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                            className="bg-[#088E31] text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: 1 }}

@@ -10,7 +10,7 @@ const Contact = () => {
             <div className="bg-gray-100 min-h-screen">
                 {/* Header Section */}
                 <motion.div
-                    className="text-center py-12 bg-green-500 text-white mt-16"
+                    className="text-center py-12 bg-[#088E31] text-white mt-16"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -42,19 +42,19 @@ const Contact = () => {
 
                         <ul className="space-y-4">
                             <li className="flex items-center">
-                                <MapPin className="text-green-500 w-6 h-6 mr-3" />
+                                <MapPin className="text-[#088E31] w-6 h-6 mr-3" />
                                 <p className="text-sm sm:text-base text-gray-700">
                                     <span className="font-bold">Location:</span> Juaben quarters-Ashanti
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <Phone className="text-green-500 w-6 h-6 mr-3" />
+                                <Phone className="text-[#088E31] w-6 h-6 mr-3" />
                                 <p className="text-sm sm:text-base text-gray-700">
-                                    <span className="font-bold">Phone:</span> +233 2413 75734
+                                    <span className="font-bold">Phone:</span> +233 2413 75734 / +233 2469 08838
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <Mail className="text-green-500 w-6 h-6 mr-3" />
+                                <Mail className="text-[#088E31] w-6 h-6 mr-3" />
                                 <p className="text-sm sm:text-base text-gray-700">
                                     <span className="font-bold">Email:</span> danielmenah43@gmail.com
                                 </p>

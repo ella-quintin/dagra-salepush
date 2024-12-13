@@ -40,7 +40,7 @@ const Product = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.5 }}
                         >
-                            <h4 className="text-green-500 uppercase tracking-wide font-semibold text-xl sm:text-2xl">
+                            <h4 className="text-[#088E31] uppercase tracking-wide font-semibold text-xl sm:text-2xl">
                                 DAGRA Organic Soil Conditioner
                             </h4>
                             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
@@ -78,7 +78,7 @@ const Product = () => {
                             <div className="mt-8">
                                 <motion.button
                                     onClick={() => window.location.href = `tel:+233241375734`}
-                                    className="bg-green-500 text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
+                                    className="bg-[#088E31] text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                                     initial={{ scale: 0 }}
                                     animate={{ scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.6 }}
