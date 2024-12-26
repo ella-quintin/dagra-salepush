@@ -116,15 +116,15 @@ const Product = () => {
 
                         {/* Right Image */}
                         <motion.div
-                            className="rounded-lg overflow-hidden shadow-md"
+                            className="rounded-lg overflow-hidden"
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.5 }}
                         >
                             <img
-                                src={soil}
+                                src={sack}
                                 alt="DAGRA Organic Soil Conditioner"
-                                className="w-full h-full"
+                                className=""
                             />
                         </motion.div>
                     </div>

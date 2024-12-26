@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 const Contact = () => {
 
     const [showScrollButton, setShowScrollButton] = useState(false);
-
     // Handle scroll events to toggle button visibility
     useEffect(() => {
         const handleScroll = () => {
